@@ -1,13 +1,14 @@
 /*
  * @Author: your name
  * @Date: 2021-07-27 14:47:36
- * @LastEditTime: 2021-07-29 19:02:49
+ * @LastEditTime: 2021-07-30 14:36:52
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /personal/vue-my-admin/src/router/index.js
  */
 import { createRouter, createWebHashHistory } from 'vue-router';
 import Layout from '@/Layout/index.vue';
+import baseRouter from './baseRouter';
 
 const routes = [
   {
@@ -33,6 +34,7 @@ const routes = [
       },
     ]
   },
+  ...baseRouter
 ];
 
 const router = createRouter({
