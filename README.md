@@ -1,24 +1,19 @@
-# vue-my-admin
 
-## Project setup
-```
-yarn install
-```
+# vue-manege
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+开箱即用的后台管理系统模板
 
-### Compiles and minifies for production
-```
-yarn build
-```
+开发中
 
-### Lints and fixes files
-```
-yarn lint
-```
+### TodoLists
+ [] 基础架构
+ [x] layout
+ [] 请求
+ [x] 权限
+ [x] 路由
+ [] vuex
+ [x] 基础组件
+ [x] 基础方法
+ 
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
