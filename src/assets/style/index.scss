@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+html{
+    height: 100vh;
+    width: 100vw;
+}
+a{
+    text-decoration:none; 
+}
+a:active{
+    color: var(--el-text-color-secondary);
+}
+a:any-link{
+    color: var(--el-text-color-secondary);
+}
