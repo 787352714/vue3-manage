@@ -1,7 +1,7 @@
 <!--
  * @Author: zj
  * @Date: 2021-07-30 14:24:29
- * @LastEditTime: 2021-07-30 15:35:49
+ * @LastEditTime: 2021-08-02 17:25:10
  * @LastEditors: Please set LastEditors
  * @Description: login
 -->
@@ -16,14 +16,16 @@
     </div>
 </template>
 <script>
-import { reactive, ref } from 'vue'
+import { reactive, ref } from 'vue';
 export default {
     setup(){
         const userAccount = ref("");
         const userPassword = ref("");
         const form = reactive({userAccount,userPassword});
         const handleLogin = ()=>{
-            console.log(form)
+            getToken(form).then(res=>{
+                console.log({res})
+            })
         }
         return {
             userAccount,

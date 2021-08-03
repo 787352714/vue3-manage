@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve --mode development",
+    "mock": "vue-cli-service serve --mode mock",
     "build": "vue-cli-service build --mode production",
     "serve:prepub": "vue-cli-service serve --mode prepub",
     "build:prepu": "vue-cli-service build --mode prepub",

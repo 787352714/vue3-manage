@@ -1,12 +1,13 @@
 /*
  * @Author: zj
  * @Date: 2021-07-27 16:40:38
- * @LastEditTime: 2021-07-30 10:29:32
+ * @LastEditTime: 2021-08-03 16:09:31
  * @LastEditors: Please set LastEditors
  * @Description: setting
  */
 
 const setting = {
+    appPrefix: 'manage-',
     siteLogo:'https://avatars.githubusercontent.com/u/6128107?s=200&v=4', // 页面logo
     userRole:['admin'],//测试数据
     menuList:[

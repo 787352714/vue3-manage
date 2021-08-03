@@ -4,6 +4,8 @@ module.exports = {
         resolve:{
             alias:{
                 src:"@",
+                api:"@/api",
+                setting:"@/adminSetting",
             }
         }
     }
