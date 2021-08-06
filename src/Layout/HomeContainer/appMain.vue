@@ -1,21 +1,23 @@
 <!--
  * @Author: zj
  * @Date: 2021-07-29 14:17:31
- * @LastEditTime: 2021-07-29 14:43:35
+ * @LastEditTime: 2021-08-06 14:58:43
  * @LastEditors: Please set LastEditors
  * @Description: appMain
  * @FilePath: /personal/vue-my-admin/src/Layout/HomeContainer/appMain.vue
 -->
 <template>
   <section class="app-main">
-      <transition
-      name="fade-transform"
-      mode="out-in"
-    >
-      <keep-alive :include="cachedViews">
-        <router-view :key="key" />
-      </keep-alive>
-    </transition>
+        <router-view v-slot="{ Component }" :include="cachedViews">
+            <transition
+                name="fade-transform"
+                mode="out-in"
+            >
+                <keep-alive :key="key">
+                    <component :is="Component" />
+                </keep-alive>
+            </transition>
+        </router-view>
   </section>
 </template>
 
