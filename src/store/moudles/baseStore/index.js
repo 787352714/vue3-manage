@@ -1,7 +1,7 @@
 /*
  * @Author: zj
  * @Date: 2021-07-27 20:30:38
- * @LastEditTime: 2021-08-03 16:33:38
+ * @LastEditTime: 2021-08-05 15:57:10
  * @LastEditors: Please set LastEditors
  * @Description: baseStore
  */
@@ -9,14 +9,15 @@ import { MENU_LIST,USER_ROLE,CACHE_VIEWS,IS_LOGIN,USER_INFO } from './stateTypes
 import setting from '../../../adminSetting';
 import { getToken } from 'api/login';
 import { setStorages } from '../../../utils';
-import { useRouter } from 'vue-router';
+import router from '@/router/index';
 
 export const baseStore = {
     state:()=>({
         [MENU_LIST]:[...setting.menuList],
         [USER_ROLE]:[...setting.userRole],
         [CACHE_VIEWS]:[...setting.cacheViews],
-        [IS_LOGIN]:true
+        [IS_LOGIN]:false,
+        [USER_INFO]:{}
     }),
     mutations: { 
         setMenuList:(state,value)=>{
@@ -29,7 +30,7 @@ export const baseStore = {
             state[CACHE_VIEWS] = value
         },
         setLoginStatus:(state,value)=>{
-            state[IS_LOGIN] = false
+            state[IS_LOGIN] = value
         },
         setUserInfo:(state,value)=>{
             state[USER_INFO] = value
@@ -40,24 +41,22 @@ export const baseStore = {
             getToken(body).then(res=>{
                 const userInfo = res.userInfo;
                 const userRole = res.userRole;
-                const router = useRouter()
                 if(!userInfo||!userInfo.token){
                     router.push({name:'401'})
                     return
                 }
                 if(userRole&&userRole.length){
-                    commit(setUserInfo,userInfo);
-                    commit(setUserRole,userRole);
-                    commit(setLoginStatus,true);
-                    setStorages('userInfo',userInfo);
+                    commit("setUserInfo",userInfo);
+                    commit("setUserRole",userRole);
+                    commit("setLoginStatus",true);
+                    setStorages('userInfo',JSON.stringify(userInfo));
                     setStorages('token',userInfo.token);
-                    setStorages('userInfo',userRole);
+                    setStorages('role',JSON.stringify(userRole));
                     router.push({name:'Home'})
                 }else{
                     router.push({name:'401'})
                     return
                 }
-                console.log(res)
             })
         }
     },
