@@ -1,17 +1,17 @@
 <!--
  * @Author: zj
  * @Date: 2021-07-30 14:24:29
- * @LastEditTime: 2021-08-05 18:08:35
+ * @LastEditTime: 2021-08-05 18:50:55
  * @LastEditors: Please set LastEditors
  * @Description: login
 -->
 <template>
     <div class="login">
         <div class="login-wrap">
-            <div class="login-title">登 陆</div>
+            <div class="login-title">Login</div>
             <div class="login-form">
-                <el-input class="login-form-account" v-model="userAccount" placeholder="请输入" size="small" clearable></el-input>
-                <el-input class="login-form-password" v-model="userPassword" placeholder="请输入" size="small" clearable></el-input>
+                <el-input class="login-form-account" v-model="userAccount" placeholder="请输入账号" size="small" clearable></el-input>
+                <el-input class="login-form-password" v-model="userPassword" type="password" placeholder="请输入密码" size="small" clearable></el-input>
                 <el-button class="login-form-button" type="primary" size="small" @click="handleLogin">登 陆</el-button>
             </div>
         </div>
@@ -81,9 +81,11 @@ export default {
             text-align:center;
             &-account{
                 margin-bottom: 10px;
+                opacity: 0.5;
             }
             &-password{
-                margin-bottom: 10px;
+                opacity: 0.5;
+                margin-bottom: 20px;
             }
             &-button{
                 width:120px
