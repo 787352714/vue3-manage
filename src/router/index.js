@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-07-27 14:47:36
- * @LastEditTime: 2021-08-03 16:56:28
+ * @LastEditTime: 2021-08-06 15:16:22
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /personal/vue-my-admin/src/router/index.js
@@ -15,6 +15,7 @@ const routes = [
     path: '/',
     name: 'Layout',
     component: Layout,
+    redirect:'/home',
     children:[
       {
         path: '/about',

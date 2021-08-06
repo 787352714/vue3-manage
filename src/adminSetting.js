@@ -1,7 +1,7 @@
 /*
  * @Author: zj
  * @Date: 2021-07-27 16:40:38
- * @LastEditTime: 2021-08-04 16:10:45
+ * @LastEditTime: 2021-08-06 14:55:40
  * @LastEditors: Please set LastEditors
  * @Description: setting
  */
@@ -44,7 +44,7 @@ const setting = {
             ]
         },
     ],//测试数据
-    cacheViews:[],
+    cacheViews:["Login","401","404"],
     whitelist:["Login","401","404"]
 }
 
