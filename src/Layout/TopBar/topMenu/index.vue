@@ -1,7 +1,7 @@
 <!--
  * @Author: zj
  * @Date: 2021-07-27 19:29:13
- * @LastEditTime: 2021-08-13 17:28:56
+ * @LastEditTime: 2021-08-13 18:28:38
  * @LastEditors: Please set LastEditors
  * @Description: topMenu
 -->
@@ -48,7 +48,6 @@ export default {
     .top-menu{
         height: 100%;
         width: 100%;
-        background:#c3d7df;
         .el-menu{
             height: 100%;
         }
