@@ -1,7 +1,7 @@
 <!--
  * @Author: zj
  * @Date: 2021-07-27 15:14:05
- * @LastEditTime: 2021-07-29 14:17:14
+ * @LastEditTime: 2021-08-13 18:07:27
  * @LastEditors: Please set LastEditors
  * @Description: 头部导航栏
  * @FilePath: /personal/vue-my-admin/src/components/Layout/TopBar/index.vue
@@ -43,7 +43,7 @@ export default {
         height: 66px;
         position: relative;
         overflow: hidden;
-        background: #fff;
+        background:#ffffff;
         box-shadow: 0 1px 4px rgb(0 21 41 / 8%);
         display: flex;
         align-content: center;

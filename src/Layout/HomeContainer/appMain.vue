@@ -1,7 +1,7 @@
 <!--
  * @Author: zj
  * @Date: 2021-07-29 14:17:31
- * @LastEditTime: 2021-08-06 14:58:43
+ * @LastEditTime: 2021-08-13 17:28:33
  * @LastEditors: Please set LastEditors
  * @Description: appMain
  * @FilePath: /personal/vue-my-admin/src/Layout/HomeContainer/appMain.vue
@@ -49,5 +49,6 @@ export default {
         width: 100%;
         position: relative;
         overflow: hidden;
+        background:#c3d7df;
     }
 </style>
